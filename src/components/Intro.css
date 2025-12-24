@@ -1,0 +1,146 @@
+.intro-section {
+  position: relative;
+  padding: 2rem 1rem;
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: min-height 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+/* 이동 애니메이션 완료 후 섹션 높이 조정 */
+.intro-section[data-shrinking="true"] {
+  min-height: 20vh;
+}
+
+.intro-container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0 1rem;
+}
+
+.intro-section[data-shrinking="true"] .intro-container {
+  min-height: 20vh;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 1rem;
+}
+
+.intro-text {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+  color: #171717;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, -50%);
+  will-change: transform, font-size, left, top;
+  width: auto;
+  max-width: 100%;
+  white-space: nowrap;
+}
+
+.intro-text.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.8s ease 0.2s,
+    font-size 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    left 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    top 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    transform 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* 각 줄을 개별적으로 처리하여 정렬 전환을 자연스럽게 */
+.intro-line {
+  display: block;
+  transition: all 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.intro-line:last-child {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 1단계: 왼쪽으로 이동 (줄어들기 전) */
+.intro-text.moved {
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto;
+  max-width: calc(100% - 2rem);
+  transition: left 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    top 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    transform 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    text-align 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    width 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    max-width 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.intro-text.moved .intro-line:last-child {
+  left: 0;
+  transform: translateX(0);
+}
+
+/* 2단계: 줄어들면서 상위로 이동 */
+.intro-text.shrinking {
+  font-size: 40px;
+  transform: translateY(-100%);
+  transition: font-size 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    top 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    transform 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.intro-name {
+  display: inline-block;
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+  transition: all 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .intro-section {
+    min-height: 80vh;
+    padding: 3rem 1rem;
+  }
+
+  .intro-section[data-shrinking="true"] {
+    min-height: 15vh;
+  }
+
+  .intro-container {
+    min-height: 80vh;
+  }
+
+  .intro-section[data-shrinking="true"] .intro-container {
+    min-height: 15vh;
+    padding-left: 1rem;
+  }
+
+  .intro-text {
+    font-size: 36px;
+  }
+
+  .intro-text.shrinking {
+    font-size: 24px;
+  }
+}

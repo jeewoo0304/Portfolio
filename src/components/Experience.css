@@ -1,0 +1,188 @@
+.experience-section {
+  padding: 4rem 1rem;
+  background-color: #ffffff;
+}
+
+.experience-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.experience-section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 3rem;
+  letter-spacing: -0.02em;
+  color: #171717;
+}
+
+.timeline {
+  position: relative;
+  padding: 2rem 0;
+}
+
+/* 중앙 세로선 */
+.timeline-line-vertical {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #e5e5e5;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.timeline-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: -2rem;
+  z-index: 2;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+/* 왼쪽 배치 (짝수 인덱스) */
+.timeline-item.left {
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-right: calc(50% + 2rem);
+  padding-left: 2rem;
+}
+
+/* 오른쪽 배치 (홀수 인덱스) */
+.timeline-item.right {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  padding-left: calc(50% + 2rem);
+  padding-right: 2rem;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  flex-shrink: 0;
+  z-index: 3;
+}
+
+.timeline-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #3b82f6;
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 0 2px #3b82f6;
+  position: relative;
+}
+
+.timeline-content {
+  /* flex: 0 1 45%; */
+  max-width: 500px;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.timeline-type {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #3b82f6;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.75rem;
+  background-color: #eff6ff;
+  border-radius: 9999px;
+}
+
+.timeline-period {
+  font-size: 0.875rem;
+  color: #737373;
+  font-weight: 500;
+}
+
+.timeline-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem 0;
+  color: #171717;
+  letter-spacing: -0.02em;
+}
+
+.timeline-company {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #737373;
+  margin: 0 0 0.5rem 0;
+}
+
+.timeline-description {
+  font-size: 0.875rem;
+  color: #737373;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* 모바일: 모든 항목을 왼쪽에 배치 */
+@media (max-width: 767px) {
+  .timeline-line-vertical {
+    left: 2rem;
+    transform: none;
+  }
+
+  .timeline-item {
+    flex-direction: row;
+    padding-left: 4rem;
+    padding-right: 0;
+  }
+
+  .timeline-item.left,
+  .timeline-item.right {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-right: 0;
+  }
+
+  .timeline-marker {
+    left: 2rem;
+    transform: translateX(-50%);
+  }
+
+  .timeline-content {
+    flex: 1;
+    max-width: 100%;
+  }
+}
+
+/* 태블릿 이상 */
+@media (min-width: 768px) {
+  .timeline {
+    padding: 3rem 0;
+  }
+}
+
+/* 데스크톱 */
+@media (min-width: 1024px) {
+  .experience-section {
+    padding: 6rem 1rem;
+  }
+}
