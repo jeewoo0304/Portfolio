@@ -57,19 +57,17 @@ src/
 순수 CSS로 작성되어 있으며, Bento Grid 레이아웃을 사용합니다.
 다크 테마 기반의 모던한 디자인입니다.
 
-## GitHub 연결
+## GitHub
 
-프로젝트를 GitHub에 업로드하려면:
-
-1. **자동 설정 (권장)**: 프로젝트 폴더에서 `setup-git.bat` 파일을 더블클릭하여 실행하세요.
-
-2. **수동 설정**: 자세한 내용은 [GIT_SETUP.md](./GIT_SETUP.md) 파일을 참조하세요.
+이 프로젝트는 GitHub에 연결되어 있습니다.
 
 ```bash
-git init
-git add .
-git commit -m "Initial commit"
-git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
-git branch -M main
-git push -u origin main
+# 저장소 확인
+git remote -v
+
+# 최신 변경사항 가져오기
+git pull origin main
+
+# 변경사항 업로드
+git push origin main
 ```
