@@ -1,0 +1,20 @@
+.app {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.main-content {
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+.profile-section-wrapper {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1.2s ease 2.3s, transform 1.2s ease 2.3s;
+}
+
+.profile-section-wrapper.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
