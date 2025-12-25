@@ -743,8 +743,21 @@
 }
 
 .portfolio-link-text {
-  font-size: 1.5rem;
+  font-size: 1.125rem; /* Reduced from 1.5rem on mobile */
   font-weight: 700;
+}
+
+.portfolio-link-card {
+  min-height: 120px; /* Added explicit min-height to control mobile size */
+}
+
+@media (min-width: 768px) {
+  .portfolio-link-text {
+    font-size: 1.5rem;
+  }
+  .portfolio-link-card {
+    min-height: auto;
+  }
 }
 
 .portfolio-arrow-icon {

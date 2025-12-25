@@ -181,9 +181,15 @@
 
   .timeline-item.left,
   .timeline-item.right {
-    flex-direction: row;
-    justify-content: flex-start;
-    padding-right: 0;
+    flex-direction: row !important; /* Ensure it's always row on mobile */
+    justify-content: flex-start !important;
+    padding-left: 4rem !important;
+    padding-right: 0 !important;
+    margin-bottom: 2rem; /* Add some space between items on mobile */
+  }
+
+  .timeline-item.right {
+    flex-direction: row !important; /* Force same direction as left */
   }
 
   .timeline-marker {
