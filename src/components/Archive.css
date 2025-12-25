@@ -240,6 +240,13 @@
   text-align: right;
 }
 
+.archive-contribution-desc {
+  font-size: 0.875rem;
+  color: var(--text-sub);
+  line-height: 1.4;
+  word-break: keep-all;
+}
+
 .archive-col-type {
   display: flex;
   align-items: center;
@@ -278,14 +285,14 @@
   color: #9a3412;
 }
 
-.archive-badge-public {
+.archive-badge-app {
   background-color: #faf5ff;
   color: #6b21a8;
 }
 
-.archive-badge-commerce {
-  background-color: #fef2f2;
-  color: #991b1b;
+.archive-badge-finance {
+  background-color: #eff6ff;
+  color: #1e40af;
 }
 
 .archive-col-link {
