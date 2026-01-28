@@ -60,7 +60,7 @@ const Intro = ({ onAnimationComplete }) => {
             환경에 맞추고, 소통하며, 결과로 증명하는
           </span>
           <span className="intro-line">
-            <span className="intro-name">웹 퍼블리셔 홍길동</span>입니다.
+            <span className="intro-name">웹 퍼블리셔 전지우</span>입니다.
           </span>
         </h1>
       </div>
