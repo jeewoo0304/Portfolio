@@ -3,7 +3,7 @@ import "./Contact.css";
 
 const Contact = () => {
   const [copied, setCopied] = useState(false);
-  const email = "example@email.com";
+  const email = "jeewoo0304@gmail.com";
 
   const handleEmailCopy = async () => {
     try {
@@ -68,23 +68,12 @@ const Contact = () => {
                   </button>
                 </div>
               </div>
-              <div className="contact-item">
-                <span className="contact-label">GitHub</span>
-                <a
-                  href="https://github.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="contact-link"
-                >
-                  github.com/username
-                </a>
-              </div>
             </div>
           </div>
         </div>
         <div className="contact-footer">
           <p className="contact-copyright">
-            © 2025 홍길동. All rights reserved.
+            © 2026 전지우. All rights reserved.
           </p>
           <p className="contact-built-with">
             Built with HTML5, CSS3, JavaScript, React

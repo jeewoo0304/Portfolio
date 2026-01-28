@@ -6,11 +6,11 @@ const Profile = () => {
   const [imageError, setImageError] = useState(false);
 
   const profileData = {
-    name: "홍길동",
-    position: "Web Publisher & Frontend Dev",
-    email: "hong@example.com",
+    name: "전지우",
+    position: "Web Publisher",
+    email: "jeewoo0304@gmail.com",
     isEmployed: true,
-    skills: ["HTML5", "CSS3", "JavaScript", "SCSS", "React", "Vue.js", "Git"],
+    skills: ["HTML5", "CSS3", "SCSS", "JavaScript", "React", "Git"],
     mainSkills: ["시맨틱 마크업", "크로스 브라우징", "웹 접근성", "반응형 웹"],
   };
 

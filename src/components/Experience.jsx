@@ -12,7 +12,7 @@ const Experience = () => {
     },
     {
       type: "학력",
-      title: "컴퓨터과학과",
+      title: "컴퓨터과학과 - 재학중",
       company: "방송통신대학교",
       period: "2021.08 - 재학중",
       description: "자료구조, 운영체제, 디지털논리회로, 파이썬, 선형대수, 이산수학, HTML5 등 수료",
@@ -33,7 +33,7 @@ const Experience = () => {
     },
     {
       type: "경력",
-      title: "퍼블리셔 팀 - 팀장(과장)",
+      title: "퍼블리셔 팀 - 과장(팀장)",
       company: "허브디앤씨",
       period: "2017.11 - 2019.05",
       description: "웹/앱/반응형 제작, 웹솔루션 제작, 유지보수, 퍼블리싱 가이드 작업 및 검수, HTML5 교체작업 등\n퍼블팀 면접 및 교육, PM, PL, 인사관리",

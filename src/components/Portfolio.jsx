@@ -33,10 +33,10 @@ const Portfolio = () => {
                     <h3>브라보코리아</h3>
                   </div>
                   <p className="portfolio-featured-description">
-                    전북은행 외국인금융플랫폼 브라보코리아 퍼블리싱
+                    전북은행 외국인금융플랫폼 브라보코리아 프로젝트
                   </p>
                   <p className="portfolio-featured-description">
-                    2025 APP AWARDS 금융연계서비스분야 대상
+                    <strong>2025 APP AWARDS 금융연계서비스분야 대상</strong>
                   </p>
                   <div className="portfolio-featured-tags">
                     <span className="portfolio-tag-badge">React</span>
@@ -159,16 +159,17 @@ const Portfolio = () => {
                     SC제일은행 인터넷뱅킹 웹접근성 향상 프로젝트
                   </p>
                   <p className="portfolio-featured-description">
-                    한국웹접근성인증평가원 2024.03.15~2025.03.14
+                    <strong>한국웹접근성인증평가원 2024.03.15~2025.03.14</strong>
                   </p>
                   <div className="portfolio-featured-tags">
                     <span className="portfolio-tag-badge">HTML5</span>
                     <span className="portfolio-tag-badge">CSS3</span>
+                    <span className="portfolio-tag-badge">jQuery</span>
                   </div>
                   <div className="portfolio-featured-contribution">
                     <span className="portfolio-contribution-label">PC</span>
                     <span className="portfolio-contribution-label">
-                      웹 접근성 준수
+                      웹 접근성 마크 획득
                     </span>
                     <span className="portfolio-contribution-label">5개월</span>
                   </div>
@@ -232,7 +233,10 @@ const Portfolio = () => {
                     <h3>현대카드 M몰</h3>
                   </div>
                   <p className="portfolio-featured-description">
-                    현대카드 M몰 고도화 프로젝트 (M몰 모듈 에디터 신규 구축)
+                    현대카드 M몰 고도화 프로젝트
+                  </p>
+                  <p className="portfolio-featured-description">
+                    <strong>M몰 모듈 에디터 신규 구축</strong>
                   </p>
                   <div className="portfolio-featured-tags">
                     <span className="portfolio-tag-badge">HTML5</span>
@@ -243,6 +247,7 @@ const Portfolio = () => {
                   <div className="portfolio-featured-contribution">
                     <span className="portfolio-contribution-label">앱</span>
                     <span className="portfolio-contribution-label">PC</span>
+                    <span className="portfolio-contribution-label">모듈 에디터</span>
                     <span className="portfolio-contribution-label">구축</span>
                     <span className="portfolio-contribution-label">6개월</span>
                   </div>
@@ -295,6 +300,28 @@ const Portfolio = () => {
                     </svg>
                     <span>iOS</span>
                   </a>
+                  <a
+                    href="https://withmmall.hyundaicard.com/wm001/WM001M01.do"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="현대카드 M몰 입점 문의 사이트 보기"
+                    className="portfolio-action-link"
+                    tabIndex={0}
+                  >
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      aria-hidden="true"
+                    >
+                      <line x1="7" y1="17" x2="17" y2="7" />
+                      <polyline points="7 7 17 7 17 17" />
+                    </svg>
+                    <span>Visit Site</span>
+                  </a>
                 </div>
               </div>
               <figure
@@ -328,7 +355,7 @@ const Portfolio = () => {
                   <div className="portfolio-mockup-screen portfolio-mockup-screen-desktop">
                     <div className="portfolio-mockup-content portfolio-mockup-scroll">
                       <img
-                        src="/hyundaemmall01.webp"
+                        src="/hyundaemmallpc.png"
                         alt="현대카드 M몰 PC 버전"
                         className="portfolio-mockup-image portfolio-mockup-image-desktop"
                       />
@@ -339,7 +366,7 @@ const Portfolio = () => {
             </div>
           </article>
 
-          {/* SC제일은행 화상상담 시스템 */}
+          {/* 우리은행 모니모 프로젝트 */}
           <article
             className="portfolio-bento-card portfolio-lg-col-2 portfolio-theme-purple portfolio-featured portfolio-public"
             role="listitem"
@@ -348,25 +375,22 @@ const Portfolio = () => {
               <div className="portfolio-featured-header">
                 <div className="portfolio-featured-info">
                   <div className="portfolio-featured-title-wrapper">
-                    <h3>화상상담 시스템</h3>
+                    <h3>우리은행 모니모(예정)</h3>
                   </div>
                   <p className="portfolio-featured-description">
-                    SC제일은행 화상상담 시스템 프로젝트
+                    우리은행 모니모 서비스 프로젝트
                   </p>
                   <div className="portfolio-featured-tags">
                     <span className="portfolio-tag-badge">HTML5</span>
                     <span className="portfolio-tag-badge">CSS3</span>
                     <span className="portfolio-tag-badge">JavaScript</span>
-                    <span className="portfolio-tag-badge">jQuery</span>
+                    <span className="portfolio-tag-badge">React</span>
                   </div>
                   <div className="portfolio-featured-contribution">
-                    <span className="portfolio-contribution-label">PC</span>
+                    <span className="portfolio-contribution-label">APP</span>
                     <span className="portfolio-contribution-label">MW</span>
-                    <span className="portfolio-contribution-label">admin</span>
                     <span className="portfolio-contribution-label">구축</span>
-                    <span className="portfolio-contribution-label">
-                      6.5개월
-                    </span>
+                    <span className="portfolio-contribution-label">6개월</span>
                   </div>
                 </div>
                 <div
@@ -375,40 +399,52 @@ const Portfolio = () => {
                 ></div>
               </div>
               <figure
-                className="portfolio-featured-mockup portfolio-featured-mockup-mobile-only"
+                className="portfolio-featured-mockup portfolio-featured-mockup-mobile-only portfolio-featured-mockup-mobile-dual"
                 aria-hidden="true"
               >
-                <div className="portfolio-mockup-device portfolio-mockup-mobile-frame portfolio-mockup-mobile-behind">
+                <div className="portfolio-mockup-device portfolio-mockup-mobile-frame portfolio-mockup-dual-item">
                   <div className="portfolio-mockup-screen portfolio-mockup-screen-mobile">
                     <div className="portfolio-mockup-content portfolio-mockup-scroll portfolio-mockup-3images">
                       <div className="portfolio-mockup-images">
                         <img
-                          src="/hyundaemmall01.webp"
-                          alt="SC제일은행 화상상담 시스템 화면 1"
+                          src="/pf/no_img.jpg"
+                          alt="우리은행 모니모 프로젝트 화면 1"
                           className="portfolio-mockup-image"
                         />
                         <img
-                          src="/hyundaemmall02.webp"
-                          alt="SC제일은행 화상상담 시스템 화면 2"
+                          src="/pf/no_img.jpg"
+                          alt="우리은행 모니모 프로젝트 화면 1"
                           className="portfolio-mockup-image"
                         />
                         <img
-                          src="/hyundaemmall03.webp"
-                          alt="SC제일은행 화상상담 시스템 화면 3"
+                          src="/pf/no_img.jpg"
+                          alt="우리은행 모니모 프로젝트 화면 1"
                           className="portfolio-mockup-image"
                         />
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="portfolio-mockup-device portfolio-mockup-desktop-frame portfolio-mockup-desktop-front">
-                  <div className="portfolio-mockup-screen portfolio-mockup-screen-desktop">
-                    <div className="portfolio-mockup-content portfolio-mockup-scroll">
-                      <img
-                        src="/hyundaemmall01.webp"
-                        alt="SC제일은행 화상상담 시스템 PC 버전"
-                        className="portfolio-mockup-image portfolio-mockup-image-desktop"
-                      />
+                <div className="portfolio-mockup-device portfolio-mockup-mobile-frame portfolio-mockup-dual-item">
+                  <div className="portfolio-mockup-screen portfolio-mockup-screen-mobile">
+                    <div className="portfolio-mockup-content portfolio-mockup-scroll portfolio-mockup-3images">
+                      <div className="portfolio-mockup-images">
+                        <img
+                          src="/pf/no_img.jpg"
+                          alt="우리은행 모니모 프로젝트 화면 2"
+                          className="portfolio-mockup-image"
+                        />
+                        <img
+                          src="/pf/no_img.jpg"
+                          alt="우리은행 모니모 프로젝트 화면 2"
+                          className="portfolio-mockup-image"
+                        />
+                        <img
+                          src="/pf/no_img.jpg"
+                          alt="우리은행 모니모 프로젝트 화면 2"
+                          className="portfolio-mockup-image"
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -422,7 +458,7 @@ const Portfolio = () => {
             role="listitem"
           >
             <a
-              href="#archive"
+              href="#archive-heading"
               className="portfolio-full-link"
               aria-label="전체 포트폴리오 보기"
             >
@@ -435,10 +471,11 @@ const Portfolio = () => {
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 aria-hidden="true"
               >
-                <line x1="7" y1="17" x2="17" y2="7" />
-                <polyline points="7 7 17 7 17 17" />
+                <polyline points="6 10 12 16 18 10" />
               </svg>
             </a>
           </article>

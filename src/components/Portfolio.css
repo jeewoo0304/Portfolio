@@ -445,6 +445,35 @@
   transform-origin: bottom right;
 }
 
+/* 우리은행 모니모: 모바일 화면 2개 나란히 */
+.portfolio-featured-mockup-mobile-dual {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.portfolio-featured-mockup-mobile-dual .portfolio-mockup-dual-item {
+  position: relative;
+  flex-shrink: 0;
+  opacity: 1;
+  transform: none;
+  width: 140px;
+}
+
+@media (min-width: 768px) {
+  .portfolio-featured-mockup-mobile-dual .portfolio-mockup-dual-item {
+    width: 180px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .portfolio-featured-mockup-mobile-dual .portfolio-mockup-dual-item {
+    width: 200px;
+  }
+}
+
 .portfolio-mockup-desktop-front {
   position: absolute;
   bottom: 50px;
@@ -766,7 +795,7 @@
 
 .portfolio-link-card:hover .portfolio-arrow-icon,
 .portfolio-link-card:focus-within .portfolio-arrow-icon {
-  transform: translate(4px, -4px);
+  transform: scale(1.4);
 }
 
 /* Avatar Group */
