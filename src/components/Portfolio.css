@@ -1,24 +1,12 @@
 /* --- 1. Layout Structure --- */
 .portfolio-section {
-  padding: 4rem 1rem;
+  padding: var(--section-padding);
   width: 100%;
-}
-
-.portfolio-container {
-  max-width: 1280px;
-  margin: 0 auto;
+  background-color: var(--bg-section);
 }
 
 .portfolio-section-header {
-  margin-bottom: 3rem;
-}
-
-.portfolio-section-header h2 {
-  font-size: 2.5rem;
-  font-weight: 800;
-  margin-bottom: 1rem;
-  letter-spacing: -0.02em;
-  color: var(--text-main);
+  margin-bottom: var(--section-header-margin);
 }
 
 .portfolio-section-header p {
@@ -80,8 +68,9 @@
   border-radius: var(--radius-lg);
   border: 1px solid var(--border-color);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   background-color: var(--bg-card);
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s var(--ease-smooth), box-shadow 0.3s ease;
 }
 
 .portfolio-bento-card:hover {
@@ -92,6 +81,28 @@
 .portfolio-bento-card:focus-within {
   outline: 2px solid var(--focus-outline);
   outline-offset: 2px;
+}
+
+/* 스크롤 시 각 카드가 뷰포트에 들어올 때마다 위치 이동으로 등장 (좌→우, 하→상, 우→좌 순환) */
+
+.portfolio-bento-card:nth-child(1) { transform: translateX(-80px); }   /* 좌측 → 우측 */
+.portfolio-bento-card:nth-child(2) { transform: translateY(60px); }    /* 하단 → 상단 */
+.portfolio-bento-card:nth-child(3) { transform: translateX(80px); }     /* 우측 → 좌측 */
+.portfolio-bento-card:nth-child(4) { transform: translateX(-80px); }    /* 좌측 → 우측 */
+.portfolio-bento-card:nth-child(5) { transform: translateY(60px); }    /* 하단 → 상단 */
+.portfolio-bento-card:nth-child(6) { transform: translateX(80px); }    /* 우측 → 좌측 */
+.portfolio-bento-card:nth-child(7) { transform: translateX(-80px); }
+.portfolio-bento-card:nth-child(8) { transform: translateY(60px); }
+.portfolio-bento-card:nth-child(9) { transform: translateX(80px); }
+.portfolio-bento-card:nth-child(10) { transform: translateX(-80px); }
+
+.portfolio-bento-card.in-view {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.portfolio-bento-card.in-view:hover {
+  transform: translateY(-4px);
 }
 
 .portfolio-card-content {
@@ -152,65 +163,6 @@
 .portfolio-theme-dark .portfolio-subtitle,
 .portfolio-theme-black .portfolio-subtitle {
   color: var(--text-sub);
-}
-
-/* Header & Actions */
-.portfolio-card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 1rem;
-}
-
-.portfolio-card-actions {
-  display: flex;
-  gap: 0.5rem;
-  opacity: 0;
-  transform: translateX(10px);
-  transition: all 0.3s ease;
-}
-
-.portfolio-bento-card:hover .portfolio-card-actions,
-.portfolio-bento-card:focus-within .portfolio-card-actions {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.portfolio-icon-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background-color: var(--bg-card);
-  color: var(--text-main);
-  transition: background-color 0.2s;
-  cursor: pointer;
-  border: none;
-  padding: 0;
-}
-
-.portfolio-icon-btn:focus {
-  outline: 2px solid var(--focus-outline);
-  outline-offset: 2px;
-}
-
-.portfolio-icon-btn.dark {
-  background-color: var(--bg-card-dark);
-  color: var(--copy-feedback-color);
-}
-
-.portfolio-icon-btn:hover {
-  background-color: var(--border-color);
-}
-
-.portfolio-icon-btn.dark:hover {
-  background-color: var(--text-main);
-}
-
-.portfolio-icon-btn:active {
-  transform: scale(0.95);
 }
 
 /* --- 5. Featured Project Card --- */
@@ -600,131 +552,6 @@
   }
 }
 
-/* --- 6. Visual Mockups (CSS Only Art) --- */
-
-/* Desktop Mockup */
-.portfolio-mockup-desktop {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 80%;
-  height: 80%;
-  background-color: var(--bg-card);
-  border-top-left-radius: 1rem;
-  box-shadow: -5px -5px 20px rgba(0, 0, 0, 0.05);
-  border-top: 1px solid var(--border-color);
-  border-left: 1px solid var(--border-color);
-  transition: transform 0.5s ease;
-}
-
-.portfolio-bento-card:hover .portfolio-mockup-desktop {
-  transform: scale(1.03);
-  transform-origin: bottom right;
-}
-
-.portfolio-mockup-desktop .portfolio-screen {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  color: #9ca3af;
-  font-size: 0.875rem;
-  background: linear-gradient(135deg, #eff6ff 0%, #e0e7ff 100%);
-  border-top-left-radius: 1rem;
-}
-
-/* Mobile Mockup */
-.portfolio-mockup-mobile {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 70%;
-  height: 80%;
-  background-color: var(--bg-card-dark);
-  border-top-left-radius: 1.5rem;
-  border-top-right-radius: 1.5rem;
-  border: 4px solid var(--bg-card);
-  border-bottom: none;
-  transition: transform 0.5s ease;
-}
-
-.portfolio-bento-card:hover .portfolio-mockup-mobile {
-  transform: translateX(-50%) translateY(-10px);
-}
-
-.portfolio-phone-frame {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #262626;
-}
-
-/* Tech Tags */
-.portfolio-center-content {
-  align-items: flex-start;
-  justify-content: flex-end;
-}
-
-.portfolio-tag-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 1rem;
-}
-
-.portfolio-tag {
-  padding: 0.25rem 0.75rem;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 9999px;
-  font-size: 0.75rem;
-  font-weight: 500;
-}
-
-.portfolio-theme-light .portfolio-tag,
-.portfolio-theme-blue .portfolio-tag,
-.portfolio-theme-orange .portfolio-tag,
-.portfolio-theme-green .portfolio-tag,
-.portfolio-theme-purple .portfolio-tag {
-  background-color: rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  color: var(--text-main);
-}
-
-/* Wide Mockup */
-.portfolio-mockup-wide {
-  position: absolute;
-  right: -20px;
-  bottom: -20px;
-  width: 60%;
-  height: 100%;
-  background: var(--bg-card);
-  border-top-left-radius: 1.5rem;
-  opacity: 0.8;
-  transition: opacity 0.3s;
-}
-
-.portfolio-bento-card:hover .portfolio-mockup-wide {
-  opacity: 1;
-}
-
-.portfolio-screen-inner {
-  width: 100%;
-  height: 100%;
-  background: #f3f4f6;
-  border-top-left-radius: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.75rem;
-  color: #9ca3af;
-}
-
 /* Link Card */
 .portfolio-link-card {
   cursor: pointer;
@@ -752,12 +579,19 @@
 }
 
 .portfolio-link-text {
-  font-size: 1.125rem; /* Reduced from 1.5rem on mobile */
+  font-size: 1.125rem;
   font-weight: 700;
 }
 
-.portfolio-link-card {
-  min-height: 120px; /* Added explicit min-height to control mobile size */
+@media (max-width: 767px) {
+  /* 그리드 행 최소 높이를 280px→72px로 완화해 링크 카드 행만 낮게 표시 (다른 카드는 콘텐츠로 높이 유지) */
+  .portfolio-bento-grid {
+    grid-auto-rows: minmax(72px, auto);
+  }
+
+  .portfolio-link-card {
+    min-height: 72px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -778,83 +612,3 @@
   transform: scale(1.4);
 }
 
-/* Avatar Group */
-.portfolio-avatar-group {
-  display: flex;
-  margin-top: 1rem;
-}
-
-.portfolio-avatar-group .portfolio-circle {
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
-  border: 2px solid white;
-  margin-left: -0.5rem;
-}
-
-.portfolio-avatar-group .portfolio-circle:first-child {
-  margin-left: 0;
-}
-
-.portfolio-gradient-1 {
-  background: linear-gradient(to right, #c084fc, #db2777);
-}
-
-.portfolio-gradient-2 {
-  background: linear-gradient(to right, #60a5fa, #3b82f6);
-}
-
-.portfolio-gradient-3 {
-  background: linear-gradient(to right, #4ade80, #16a34a);
-}
-
-.portfolio-count {
-  background: var(--border-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.625rem;
-  font-weight: bold;
-  color: var(--text-main);
-}
-
-/* Skills Section */
-.portfolio-skills-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  margin-top: 1rem;
-  list-style: none;
-  padding: 0;
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.portfolio-skill-item {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.875rem;
-}
-
-.portfolio-skill-icon {
-  width: 20px;
-  height: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-/* Screen reader only */
-.portfolio-sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
-}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useLayoutEffect } from "react";
 import Intro from "./components/Intro";
 import Profile from "./components/Profile";
 import Experience from "./components/Experience";
@@ -12,13 +12,22 @@ import "./App.css";
 function App() {
   const [showProfile, setShowProfile] = useState(false);
 
+  useLayoutEffect(() => {
+    if (typeof history !== "undefined") {
+      history.scrollRestoration = "manual";
+    }
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="app">
       <ThemeToggle />
       <main className="main-content">
         <Intro onAnimationComplete={() => setShowProfile(true)} />
         <div
-          className={`profile-section-wrapper ${showProfile ? "visible" : ""}`}
+          className={["profile-section-wrapper", showProfile && "visible"]
+            .filter(Boolean)
+            .join(" ")}
         >
           <Profile />
         </div>

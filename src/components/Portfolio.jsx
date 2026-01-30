@@ -1,19 +1,24 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./Portfolio.css";
+import { ExternalLinkIcon } from "./icons";
+import { useScrollReveal } from "../hooks/useScrollReveal";
 
 const Portfolio = () => {
+  const gridRef = useRef(null);
+  useScrollReveal(gridRef, ".portfolio-bento-card");
+
   return (
     <section className="portfolio-section" aria-labelledby="portfolio-heading">
-      <div className="portfolio-container">
+      <div className="section-container portfolio-container">
         <header className="portfolio-section-header">
-          <h2 id="portfolio-heading">포트폴리오</h2>
+          <h2 id="portfolio-heading" className="section-title">포트폴리오</h2>
           <p>
             반응형 웹부터 인터랙티브 UI까지,
             <br />웹 표준과 접근성을 고려한 대표 프로젝트들입니다.
           </p>
         </header>
 
-        <div className="portfolio-bento-grid" role="list">
+        <div ref={gridRef} className="portfolio-bento-grid" role="list">
           {/* 기업 홈페이지 리뉴얼 - Featured Project */}
           <article
             className="portfolio-bento-card portfolio-lg-col-2 portfolio-theme-blue portfolio-featured portfolio-bravo"
@@ -63,18 +68,7 @@ const Portfolio = () => {
                     className="portfolio-action-link"
                     tabIndex={0}
                   >
-                    <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      aria-hidden="true"
-                    >
-                      <line x1="7" y1="17" x2="17" y2="7" />
-                      <polyline points="7 7 17 7 17 17" />
-                    </svg>
+                    <ExternalLinkIcon size={18} />
                     <span>Android</span>
                   </a>
                   <a
@@ -85,18 +79,7 @@ const Portfolio = () => {
                     className="portfolio-action-link"
                     tabIndex={0}
                   >
-                    <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      aria-hidden="true"
-                    >
-                      <line x1="7" y1="17" x2="17" y2="7" />
-                      <polyline points="7 7 17 7 17 17" />
-                    </svg>
+                    <ExternalLinkIcon size={18} />
                     <span>iOS</span>
                   </a>
                 </div>
@@ -188,18 +171,7 @@ const Portfolio = () => {
                     className="portfolio-action-link"
                     tabIndex={0}
                   >
-                    <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      aria-hidden="true"
-                    >
-                      <line x1="7" y1="17" x2="17" y2="7" />
-                      <polyline points="7 7 17 7 17 17" />
-                    </svg>
+                    <ExternalLinkIcon size={18} />
                     <span>Visit Site</span>
                   </a>
                 </div>
@@ -268,18 +240,7 @@ const Portfolio = () => {
                     className="portfolio-action-link"
                     tabIndex={0}
                   >
-                    <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      aria-hidden="true"
-                    >
-                      <line x1="7" y1="17" x2="17" y2="7" />
-                      <polyline points="7 7 17 7 17 17" />
-                    </svg>
+                    <ExternalLinkIcon size={18} />
                     <span>Android</span>
                   </a>
                   <a
@@ -290,18 +251,7 @@ const Portfolio = () => {
                     className="portfolio-action-link"
                     tabIndex={0}
                   >
-                    <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      aria-hidden="true"
-                    >
-                      <line x1="7" y1="17" x2="17" y2="7" />
-                      <polyline points="7 7 17 7 17 17" />
-                    </svg>
+                    <ExternalLinkIcon size={18} />
                     <span>iOS</span>
                   </a>
                   <a
@@ -312,18 +262,7 @@ const Portfolio = () => {
                     className="portfolio-action-link"
                     tabIndex={0}
                   >
-                    <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      aria-hidden="true"
-                    >
-                      <line x1="7" y1="17" x2="17" y2="7" />
-                      <polyline points="7 7 17 7 17 17" />
-                    </svg>
+                    <ExternalLinkIcon size={18} />
                     <span>Visit Site</span>
                   </a>
                 </div>

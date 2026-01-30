@@ -26,6 +26,20 @@
   --focus-outline: #3b82f6;
   --shadow-card: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
   --shadow-card-hover: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  --shadow-float: 0 2px 8px rgba(0, 0, 0, 0.08);
+  /* Layout */
+  --container-max: 1280px;
+  --section-padding: 4rem 1rem;
+  --section-padding-lg: 6rem 1rem;
+  --section-header-margin: 3rem;
+  /* Motion */
+  --ease-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  /* Contact(Footer) - 다크 영역 전용 */
+  --contact-bg: var(--bg-card-dark);
+  --contact-text: #ffffff;
+  --contact-text-muted: rgba(255, 255, 255, 0.6);
+  --contact-text-sub: rgba(255, 255, 255, 0.8);
+  --contact-border: rgba(255, 255, 255, 0.1);
 }
 
 /* --- Theme: Dark --- */
@@ -54,6 +68,7 @@
   --focus-outline: #60a5fa;
   --shadow-card: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
   --shadow-card-hover: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+  --shadow-float: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 * {
@@ -88,5 +103,19 @@ a {
 
 button {
   font-family: inherit;
+}
+
+/* --- Section layout (공통) --- */
+.section-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+  color: var(--text-main);
 }
 

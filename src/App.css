@@ -10,8 +10,8 @@
 
 .profile-section-wrapper {
   opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 1.2s ease 2.3s, transform 1.2s ease 2.3s;
+  transform: translateY(500px);
+  transition: opacity 1s ease, transform 1s ease;
 }
 
 .profile-section-wrapper.visible {

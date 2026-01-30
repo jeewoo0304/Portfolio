@@ -1,26 +1,13 @@
 /* Archive Section */
 .archive-section {
-  padding: 4rem 1rem;
+  padding: var(--section-padding);
   width: 100%;
   background-color: var(--bg-page);
 }
 
-.archive-container {
-  max-width: 1280px;
-  margin: 0 auto;
-}
-
 .archive-section-header {
-  margin-bottom: 3rem;
+  margin-bottom: var(--section-header-margin);
   text-align: center;
-}
-
-.archive-section-header h2 {
-  font-size: 2.5rem;
-  font-weight: 800;
-  margin-bottom: 1rem;
-  letter-spacing: -0.02em;
-  color: var(--text-main);
 }
 
 .archive-section-count {

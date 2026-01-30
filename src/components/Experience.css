@@ -1,24 +1,16 @@
 .experience-section {
-  padding: 4rem 1rem;
+  padding: var(--section-padding);
   background-color: var(--bg-page);
 }
 
-.experience-container {
-  max-width: 1280px;
-  margin: 0 auto;
-}
-
 .experience-section-title {
-  font-size: 2.5rem;
-  font-weight: 800;
-  margin-bottom: 3rem;
-  letter-spacing: -0.02em;
-  color: var(--text-main);
+  margin-bottom: var(--section-header-margin);
 }
 
 .timeline {
   position: relative;
   padding: 2rem 0;
+  perspective: 1200px;
 }
 
 /* 중앙 세로선 */
@@ -39,6 +31,14 @@
   align-items: center;
   margin-bottom: -4rem;
   z-index: 2;
+  opacity: 0;
+  transform: translateY(24px) rotateY(360deg);
+  transition: opacity 0.55s ease, transform 0.55s var(--ease-smooth);
+}
+
+.timeline-item.in-view {
+  opacity: 1;
+  transform: translateY(0) rotateY(0deg);
 }
 
 .timeline-item:last-child {
@@ -209,6 +209,6 @@
 /* 데스크톱 */
 @media (min-width: 1024px) {
   .experience-section {
-    padding: 6rem 1rem;
+    padding: var(--section-padding-lg);
   }
 }

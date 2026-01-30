@@ -1,19 +1,10 @@
 .profile-section {
-  padding: 4rem 1rem;
+  padding: var(--section-padding);
   background-color: var(--bg-section);
 }
 
-.profile-container {
-  max-width: 1280px;
-  margin: 0 auto;
-}
-
 .profile-section-title {
-  font-size: 2.5rem;
-  font-weight: 800;
-  margin-bottom: 3rem;
-  letter-spacing: -0.02em;
-  color: var(--text-main);
+  margin-bottom: var(--section-header-margin);
 }
 
 .profile-content-wrapper {
@@ -262,26 +253,6 @@
   }
 }
 
-.info-status {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.5rem 1rem;
-  border-radius: 9999px;
-  font-size: 0.875rem;
-  font-weight: 600;
-  width: fit-content;
-}
-
-.info-status.employed {
-  background-color: var(--status-employed-bg);
-  color: var(--status-employed-color);
-}
-
-.info-status.unemployed {
-  background-color: var(--status-unemployed-bg);
-  color: var(--status-unemployed-color);
-}
-
 /* 기술 스택 */
 .skills-container {
   display: flex;
@@ -364,7 +335,7 @@
 /* 데스크톱 */
 @media (min-width: 1024px) {
   .profile-section {
-    padding: 6rem 1rem;
+    padding: var(--section-padding-lg);
   }
 
   .profile-content-wrapper {

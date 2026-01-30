@@ -1,36 +1,27 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import "./Intro.css";
+
+const DELAY = {
+  fadeIn: 100,
+  move: 600,
+  shrink: 2100,
+  complete: 2500,
+};
 
 const Intro = ({ onAnimationComplete }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [isMoved, setIsMoved] = useState(false);
   const [isShrinking, setIsShrinking] = useState(false);
-  const sectionRef = useRef(null);
-  const containerRef = useRef(null);
-  const textRef = useRef(null);
+  const [isComplete, setIsComplete] = useState(false);
 
   useEffect(() => {
-    // 초기 페이드인 애니메이션 (0.1초 후)
-    const fadeInTimer = setTimeout(() => {
-      setIsVisible(true);
-    }, 100);
-
-    // 중앙에 1초 노출 후 왼쪽으로 이동 (1.1초 후)
-    const moveTimer = setTimeout(() => {
-      setIsMoved(true);
-    }, 1100);
-
-    // 왼쪽 이동 완료 후 줄어들면서 상단으로 이동 (약 2.6초 후, 왼쪽 이동 1.5초 후)
-    const shrinkTimer = setTimeout(() => {
-      setIsShrinking(true);
-    }, 1850);
-
-    // 이동 애니메이션 완료 후 프로필 섹션 표시 (줄어들기 1.5초 후)
+    const fadeInTimer = setTimeout(() => setIsVisible(true), DELAY.fadeIn);
+    const moveTimer = setTimeout(() => setIsMoved(true), DELAY.move);
+    const shrinkTimer = setTimeout(() => setIsShrinking(true), DELAY.shrink);
     const profileTimer = setTimeout(() => {
-      if (onAnimationComplete) {
-        onAnimationComplete();
-      }
-    }, 1800);
+      setIsComplete(true);
+      onAnimationComplete?.();
+    }, DELAY.complete);
 
     return () => {
       clearTimeout(fadeInTimer);
@@ -42,19 +33,23 @@ const Intro = ({ onAnimationComplete }) => {
 
   return (
     <section
-      ref={sectionRef}
       className="intro-section"
       aria-labelledby="intro-heading"
       data-moved={isMoved}
       data-shrinking={isShrinking}
+      data-complete={isComplete}
     >
-      <div ref={containerRef} className="intro-container">
+      <div className="intro-container">
         <h1
-          ref={textRef}
           id="intro-heading"
-          className={`intro-text ${isVisible ? "visible" : ""} ${
-            isMoved ? "moved" : ""
-          } ${isShrinking ? "shrinking" : ""}`}
+          className={[
+            "intro-text",
+            isVisible && "visible",
+            isMoved && "moved",
+            isShrinking && "shrinking",
+          ]
+            .filter(Boolean)
+            .join(" ")}
         >
           <span className="intro-line">
             환경에 맞추고, 소통하며, 결과로 증명하는

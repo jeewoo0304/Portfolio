@@ -27,13 +27,16 @@ function ThemeToggle() {
     setThemeState(next);
   };
 
+  const ariaLabel =
+    theme === "light" ? "다크 모드로 전환" : "라이트 모드로 전환";
+
   return (
     <button
       type="button"
       className="theme-toggle"
       onClick={toggleTheme}
-      aria-label={theme === "light" ? "다크 모드로 전환" : "라이트 모드로 전환"}
-      title={theme === "light" ? "다크 모드로 전환" : "라이트 모드로 전환"}
+      aria-label={ariaLabel}
+      title={ariaLabel}
     >
       <span className="theme-toggle__icon" aria-hidden="true">
         {theme === "light" ? (
