@@ -1,6 +1,6 @@
 .experience-section {
   padding: 4rem 1rem;
-  background-color: #ffffff;
+  background-color: var(--bg-page);
 }
 
 .experience-container {
@@ -13,7 +13,7 @@
   font-weight: 800;
   margin-bottom: 3rem;
   letter-spacing: -0.02em;
-  color: #171717;
+  color: var(--text-main);
 }
 
 .timeline {
@@ -28,7 +28,7 @@
   top: 0;
   bottom: 0;
   width: 2px;
-  background-color: #e5e5e5;
+  background-color: var(--border-color);
   transform: translateX(-50%);
   z-index: 1;
 }
@@ -73,26 +73,25 @@
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background-color: #3b82f6;
-  border: 3px solid #ffffff;
-  box-shadow: 0 0 0 2px #3b82f6;
+  background-color: var(--accent-blue);
+  border: 3px solid var(--timeline-dot-border);
+  box-shadow: 0 0 0 2px var(--accent-blue);
   position: relative;
 }
 
 .timeline-content {
-  /* flex: 0 1 45%; */
   width: 100%;
   max-width: 480px;
   padding: 1.5rem;
-  background-color: #ffffff;
-  border: 1px solid #e5e5e5;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
   border-radius: 1rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .timeline-content:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-card-hover);
 }
 
 .timeline-header {
@@ -115,25 +114,25 @@
 
 /* 경력 (Career) - Blue */
 .timeline-type.career {
-  color: #3b82f6;
-  background-color: #eff6ff;
+  color: var(--accent-blue);
+  background-color: var(--bg-card-blue);
 }
 
 /* 학력 (Education) - Green */
 .timeline-type.education {
-  color: #10b981;
-  background-color: #ecfdf5;
+  color: var(--status-employed-color);
+  background-color: var(--bg-card-green);
 }
 
 /* 교육원 (Training) - Purple */
 .timeline-type.training {
-  color: #8b5cf6;
-  background-color: #f5f3ff;
+  color: var(--accent-purple);
+  background-color: var(--bg-card-purple);
 }
 
 .timeline-period {
   font-size: 0.875rem;
-  color: #737373;
+  color: var(--text-sub);
   font-weight: 500;
 }
 
@@ -141,20 +140,20 @@
   font-size: 1.5rem;
   font-weight: 700;
   margin: 0 0 0.25rem 0;
-  color: #171717;
+  color: var(--text-main);
   letter-spacing: -0.02em;
 }
 
 .timeline-company {
   font-size: 1.125rem;
   font-weight: 500;
-  color: #737373;
+  color: var(--text-sub);
   margin: 0 0 0.5rem 0;
 }
 
 .timeline-description {
   font-size: 0.875rem;
-  color: #737373;
+  color: var(--text-sub);
   line-height: 1.6;
   margin: 0;
 }

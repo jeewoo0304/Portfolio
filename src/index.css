@@ -1,3 +1,61 @@
+/* --- Theme: Light (default) --- */
+:root {
+  --bg-page: #ffffff;
+  --bg-section: #fafafa;
+  --text-main: #171717;
+  --text-sub: #737373;
+  --border-color: #e5e5e5;
+  --bg-card: #ffffff;
+  --bg-card-light: #ffffff;
+  --bg-card-dark: #171717;
+  --bg-card-blue: #eff6ff;
+  --bg-card-orange: #fff7ed;
+  --bg-card-green: #f0fdf4;
+  --bg-card-purple: #faf5ff;
+  --radius-lg: 1.5rem;
+  --radius-md: 1rem;
+  --accent-blue: #3b82f6;
+  --accent-purple: #8b5cf6;
+  --copy-feedback-bg: #171717;
+  --copy-feedback-color: #ffffff;
+  --status-employed-bg: #f0fdf4;
+  --status-employed-color: #16a34a;
+  --status-unemployed-bg: #fff7ed;
+  --status-unemployed-color: #ea580c;
+  --timeline-dot-border: #ffffff;
+  --focus-outline: #3b82f6;
+  --shadow-card: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  --shadow-card-hover: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Theme: Dark --- */
+[data-theme="dark"] {
+  --bg-page: #0f0f0f;
+  --bg-section: #1a1a1a;
+  --text-main: #fafafa;
+  --text-sub: #a3a3a3;
+  --border-color: #404040;
+  --bg-card: #262626;
+  --bg-card-light: #262626;
+  --bg-card-dark: #171717;
+  --bg-card-blue: rgba(59, 130, 246, 0.15);
+  --bg-card-orange: rgba(234, 88, 12, 0.15);
+  --bg-card-green: rgba(22, 163, 74, 0.15);
+  --bg-card-purple: rgba(139, 92, 246, 0.15);
+  --accent-blue: #60a5fa;
+  --accent-purple: #a78bfa;
+  --copy-feedback-bg: #fafafa;
+  --copy-feedback-color: #171717;
+  --status-employed-bg: rgba(22, 163, 74, 0.2);
+  --status-employed-color: #4ade80;
+  --status-unemployed-bg: rgba(234, 88, 12, 0.2);
+  --status-unemployed-color: #fb923c;
+  --timeline-dot-border: #262626;
+  --focus-outline: #60a5fa;
+  --shadow-card: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+  --shadow-card-hover: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -13,9 +71,10 @@ body {
     'Helvetica Neue', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #ffffff;
-  color: #171717;
+  background: var(--bg-page);
+  color: var(--text-main);
   line-height: 1.6;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 #root {

@@ -5,6 +5,8 @@ import Experience from "./components/Experience";
 import Portfolio from "./components/Portfolio";
 import Archive from "./components/Archive";
 import Contact from "./components/Contact";
+import TopButton from "./components/TopButton";
+import ThemeToggle from "./components/ThemeToggle";
 import "./App.css";
 
 function App() {
@@ -12,6 +14,7 @@ function App() {
 
   return (
     <div className="app">
+      <ThemeToggle />
       <main className="main-content">
         <Intro onAnimationComplete={() => setShowProfile(true)} />
         <div
@@ -24,6 +27,7 @@ function App() {
         <Archive />
         <Contact />
       </main>
+      <TopButton />
     </div>
   );
 }

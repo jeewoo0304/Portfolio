@@ -23,6 +23,15 @@
   color: var(--text-main);
 }
 
+.archive-section-count {
+  display: inline-block;
+  margin-left: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-sub);
+  vertical-align: middle;
+}
+
 .archive-section-header p {
   font-size: 1.125rem;
   color: var(--text-sub);
@@ -322,28 +331,28 @@
 }
 
 .archive-badge-pc {
-  background-color: #eff6ff;
-  color: #1e40af;
+  background-color: var(--bg-card-blue);
+  color: var(--accent-blue);
 }
 
 .archive-badge-mobile {
-  background-color: #f0fdf4;
-  color: #166534;
+  background-color: var(--bg-card-green);
+  color: var(--status-employed-color);
 }
 
 .archive-badge-responsive {
-  background-color: #fff7ed;
-  color: #9a3412;
+  background-color: var(--bg-card-orange);
+  color: var(--status-unemployed-color);
 }
 
 .archive-badge-app {
-  background-color: #faf5ff;
-  color: #6b21a8;
+  background-color: var(--bg-card-purple);
+  color: var(--accent-purple);
 }
 
 .archive-badge-finance {
-  background-color: #eff6ff;
-  color: #1e40af;
+  background-color: var(--bg-card-blue);
+  color: var(--accent-blue);
 }
 
 .archive-col-link {
@@ -460,7 +469,7 @@
     position: absolute;
     top: 1rem;
     right: 1rem;
-    background-color: white;
+    background-color: var(--bg-card);
     border-radius: 50%;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     z-index: 5;

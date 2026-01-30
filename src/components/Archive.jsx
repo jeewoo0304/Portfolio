@@ -11,7 +11,7 @@ const Archive = () => {
   const archiveData = [
     {
       id: 50,
-      title: "우리은행 / 모니모 서비스",
+      title: "우리은행 / 모니모 서비스(예정)",
       period: "신규 구축 6개월",
       contribution: "React, APP, MW",
       type: ["App", "Mobile", "Finance"],
@@ -41,7 +41,7 @@ const Archive = () => {
       title: "디앤디모바일 / 사내그룹웨어 출결 시스템",
       period: "신규 구축 1개월",
       contribution: "고객 MW, admin(PC)",
-      type: ["PC", "Mobile"],
+      type: ["PC", "Mobile", "Responsive"],
       thumb: "/pf/dnd_groupware_pc_01.jpeg",
       link: null,
     },
@@ -77,7 +77,7 @@ const Archive = () => {
       title: "SC제일은행 / 인터넷 뱅킹 웹접근성 향상 프로젝트",
       period: "웹접근성 5개월",
       contribution: "웹접근성 마크 획득",
-      type: ["PC", "Finance"],
+      type: ["PC", "Finance", "Responsive"],
       thumb: "/pf/standardchartered01.jpeg",
       link: null,
     },
@@ -157,7 +157,7 @@ const Archive = () => {
       id: 34,
       title: "GW English essay center / 학습관리센터",
       period: "신규 구축 약 3주",
-      contribution: "pc",
+      contribution: "PC",
       type: ["PC"],
       thumb: "/pf/gw_pc_3.png",
       link: null,
@@ -166,7 +166,7 @@ const Archive = () => {
       id: 33,
       title: "IR GO / 주식정보 웹앱",
       period: "신규 구축 구현 약 1주 / 리뉴얼 약 6주",
-      contribution: "참여도 구현 100% / 리뉴얼 50%",
+      contribution: "신규 PC / 리뉴얼 ",
       type: ["Mobile", "PC", "Responsive", "App", "Finance"],
       thumb: "/pf/irgo_biz_pc_1.png",
       link: null,
@@ -175,7 +175,7 @@ const Archive = () => {
       id: 32,
       title: "GLOBAL FM / 금융정보관리 웹솔루션",
       period: "리뉴얼 약 3주",
-      contribution: "HTMl5 교체 작업",
+      contribution: "HTML5 교체 작업",
       type: ["PC", "Finance"],
       thumb: "/pf/ibss_pc_2.png",
       link: null,
@@ -382,7 +382,7 @@ const Archive = () => {
       id: 9,
       title: "온종일 / 반응형웹",
       period: "신규 구축 약 2주",
-      contribution: "", 
+      contribution: "",
       type: ["Mobile", "PC", "Responsive"],
       thumb: "/pf/no_img.jpg",
       link: null,
@@ -515,7 +515,12 @@ const Archive = () => {
     <section className="archive-section" aria-labelledby="archive-heading">
       <div className="archive-container">
         <header className="archive-section-header">
-          <h2 id="archive-heading">프로젝트 아카이브</h2>
+          <h2 id="archive-heading">
+            프로젝트 아카이브
+            <span className="archive-section-count">
+              (총 {archiveData.length}개)
+            </span>
+          </h2>
           <p>다양한 프로젝트를 카테고리별로 탐색해보세요.</p>
         </header>
 
@@ -718,4 +723,3 @@ const Archive = () => {
 };
 
 export default Archive;
-

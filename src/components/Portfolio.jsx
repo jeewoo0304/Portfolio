@@ -159,7 +159,9 @@ const Portfolio = () => {
                     SC제일은행 인터넷뱅킹 웹접근성 향상 프로젝트
                   </p>
                   <p className="portfolio-featured-description">
-                    <strong>한국웹접근성인증평가원 2024.03.15~2025.03.14</strong>
+                    <strong>
+                      한국웹접근성인증평가원 2024.03.15~2025.03.14
+                    </strong>
                   </p>
                   <div className="portfolio-featured-tags">
                     <span className="portfolio-tag-badge">HTML5</span>
@@ -247,7 +249,9 @@ const Portfolio = () => {
                   <div className="portfolio-featured-contribution">
                     <span className="portfolio-contribution-label">앱</span>
                     <span className="portfolio-contribution-label">PC</span>
-                    <span className="portfolio-contribution-label">모듈 에디터</span>
+                    <span className="portfolio-contribution-label">
+                      모듈 에디터
+                    </span>
                     <span className="portfolio-contribution-label">구축</span>
                     <span className="portfolio-contribution-label">6개월</span>
                   </div>
@@ -381,10 +385,10 @@ const Portfolio = () => {
                     우리은행 모니모 서비스 프로젝트
                   </p>
                   <div className="portfolio-featured-tags">
+                    <span className="portfolio-tag-badge">React</span>
                     <span className="portfolio-tag-badge">HTML5</span>
                     <span className="portfolio-tag-badge">CSS3</span>
                     <span className="portfolio-tag-badge">JavaScript</span>
-                    <span className="portfolio-tag-badge">React</span>
                   </div>
                   <div className="portfolio-featured-contribution">
                     <span className="portfolio-contribution-label">APP</span>
